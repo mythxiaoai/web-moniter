@@ -1,0 +1,62 @@
+{
+  "name": "@aero/plugins",
+  "version": "0.2.3",
+  "description": "插件集合包 - Web监控SDK插件",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "vitest run",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "web-monitoring",
+    "plugins"
+  ],
+  "author": "senmu",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./performance": {
+      "types": "./dist/performance/index.d.ts",
+      "import": "./dist/performance/index.mjs",
+      "require": "./dist/performance/index.js"
+    },
+    "./js-error": {
+      "types": "./dist/js-error/index.d.ts",
+      "import": "./dist/js-error/index.mjs",
+      "require": "./dist/js-error/index.js"
+    },
+    "./network": {
+      "types": "./dist/network/index.d.ts",
+      "import": "./dist/network/index.mjs",
+      "require": "./dist/network/index.js"
+    },
+    "./network/reporter": {
+      "types": "./dist/network/reporter.d.ts",
+      "import": "./dist/network/reporter.mjs",
+      "require": "./dist/network/reporter.js"
+    },
+    "./network/types": {
+      "types": "./dist/network/types.d.ts",
+      "import": "./dist/network/types.mjs",
+      "require": "./dist/network/types.js"
+    }
+  },
+  "dependencies": {
+    "@aero/core": "workspace:*",
+    "@aero/types": "workspace:*"
+  }
+}
